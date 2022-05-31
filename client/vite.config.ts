@@ -6,7 +6,7 @@ import eslint from 'vite-plugin-eslint';
 export default defineConfig(() => {
 
   return {
+    // root:'./static'
     plugins: [ vue(), eslint() ]
   };
-
 })

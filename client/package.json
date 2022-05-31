@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.{ts,vue}",
+    "lint.fix": "eslint --fix src/**/*.{ts,vue}"
   },
   "dependencies": {
     "pinia": "^2.0.14",

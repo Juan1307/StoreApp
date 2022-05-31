@@ -7,16 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <button class="btn">Hello daisyui</button>
+  <button class="btn btn-primary btn-sm">Hello daisyui</button>
 
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
-
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-</style>

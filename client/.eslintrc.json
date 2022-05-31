@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "parser": "vue-eslint-parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/vue3-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true //read <script setup>
+        }
+    },
+    "plugins": [
+        "vue",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/no-var-requires": "warn",
+        //atributos en linea
+        "vue/max-attributes-per-line": "off",
+        // separacion de contenido dentro de etiqueta <div> text </div>
+        "vue/singleline-html-element-content-newline": "off",
+        // estilo de etiquetas - similar a react
+        "vue/html-self-closing": ["warn", {
+            "html": {
+                "void": "always",
+                "normal": "always",
+                "component": "always"
+            },
+            "svg": "always",
+            "math": "always"
+        }]
+    }
+
+}

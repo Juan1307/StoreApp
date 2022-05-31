@@ -1,8 +1,9 @@
 #folders
+client/node_modules
+server/node_modules
+
 node_modules
-dist
-dist-ssr
-*.local
+build
 
 # Editor directories and files
 .vscode/*
