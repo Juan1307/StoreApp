@@ -1,35 +1,37 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
-defineProps<{ msg: string }>()
+  interface HelloProps {
+    firstName: string,
+    lastName: string,
+    currentAge: number,
+    isWorking?: boolean
+  }
+  
+  const { user } = defineProps<{ user: HelloProps }>();
+  const { firstName, lastName, currentAge, 
+          isWorking = 'null is check' } = user;
+  
+  const emits = defineEmits<{ (e:'childConnect', payload: object) : void }>();
 
-const count = ref(0);
+  // flow data
+  const count = ref(0);
+  const incrementCount = () => count.value++;
 
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ firstName }}</h1>
+  <h2>{{ lastName }}</h2>
+  <h3>{{ currentAge }}</h3>
 
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
-
-  <p class="flex justify-center">See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs In here
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button class="btn" type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <p class="text-primary"> {{ isWorking }} </p>
+  <button class="btn" type="button" place="asdas" @click="incrementCount">
+    count is: {{ count }}
+  </button>
+  
+  <button class="btn btn-sm btn-secondary" type="button" 
+          @click="emits('childConnect', { name:'new object' })">
+    emit event
+  </button>
 </template>

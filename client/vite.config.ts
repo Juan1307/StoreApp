@@ -7,6 +7,8 @@ export default defineConfig(() => {
 
   return {
     // root:'./static'
-    plugins: [ vue(), eslint() ]
+    plugins: [ vue({
+       reactivityTransform: true
+    }), eslint() ]
   };
 })

@@ -23,6 +23,9 @@
         "@typescript-eslint"
     ],
     "rules": {
+        // al variables alteradas pero sin uso
+        "@typescript-eslint/no-unused-vars": "error",
+        // al usar require 
         "@typescript-eslint/no-var-requires": "warn",
         //atributos en linea
         "vue/max-attributes-per-line": "off",
@@ -37,7 +40,14 @@
             },
             "svg": "always",
             "math": "always"
-        }]
-    }
+        }],
+        "vue/first-attribute-linebreak": ["warn", {
+            "singleline": "beside",
+            "multiline": "beside"
+        }],
+        "vue/html-closing-bracket-newline": "off",
+        // props destructuring
+        "vue/no-setup-props-destructure": "warn"
 
+    }
 }

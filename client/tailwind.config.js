@@ -5,11 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Quicksand', ...sans]
+        sans: ['Quicksand', ...sans],
+        sati: ['Satisfy', 'cursive']
       }
     },
   },
-
+  // < > && || =
   // config daisy
   plugins: [ require('daisyui') ],
   

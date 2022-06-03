@@ -1,13 +1,21 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+  // import { reactive, toRefs } from 'vue';
+  import HelloWorld from './components/HelloWorld.vue'
+
+  const currentUser = {
+    firstName: 'Juanito',
+    lastName: 'Prroee',
+    currentAge: 23
+  };
+
+  const handleChildEvent = (payload) => {
+    console.log(payload);
+  };
 
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <button class="btn btn-primary btn-sm">Hello daisyui</button>
-
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <button class="btn btn-primary btn-sm font-sati">Hello daisyui</button>
+  <HelloWorld :user="currentUser" @child-connect="handleChildEvent" />
 </template>

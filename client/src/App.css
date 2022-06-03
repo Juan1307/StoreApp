@@ -6,9 +6,16 @@
 
   @font-face {
     font-family: Quicksand;
-    src: local('Quicksand'), url(/fonts/Quicksand-Regular.ttf) format('ttf');
+    font-weight: 400;
+    src: local('Quicksand'), url(/fonts/Quicksand-Regular.ttf);
     font-display: swap;
+  }
 
+  @font-face {
+    font-family: Satisfy;
+    font-weight: 400;
+    src: local('Satisfy'), url(/fonts/Satisfy-Regular.ttf);
+    font-display: swap;
   }
   
 }
