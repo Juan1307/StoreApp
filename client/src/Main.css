@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: Quicksand;
+    font-weight: 400;
+    src: local('Quicksand'), url(/fonts/Quicksand-Regular.ttf);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Satisfy;
+    font-weight: 400;
+    src: local('Satisfy'), url(/fonts/Satisfy-Regular.ttf);
+    font-display: swap;
+  }
+  
+}
+
+@layer components {
+  /* custom by DaysiUi */
+  .btn{
+    @apply rounded-sm capitalize font-normal;
+  }
+
+  .flex-center{
+    @apply flex items-center justify-center 
+  }
+
+
+  /* custom by tailwind */
+  .l-sm{
+    @apply h-4 w-4;
+  }
+
+  .l-base{
+    @apply h-6 w-6;
+  }
+
+  .l-xl{
+    @apply h-9 w-9;
+  }
+
+  .loader-circle{
+    @apply relative animate-circle-1;
+  }
+
+  .loader-circle > span{
+    clip: rect(10px, 32px, 32px, 0);
+
+    height: inherit;
+    width: inherit;
+    @apply absolute block inset-0 m-auto animate-circle-2;
+  }
+
+  .loader-circle > span::before{
+    content: '';
+    border: 2px solid transparent;
+    border-top: 2px solid; /* passed by reference */
+    height: inherit;
+    width: inherit;
+
+    @apply absolute block inset-0 m-auto animate-circle-2;
+    @apply rounded-full;
+  }
+
+  .loader-circle > span::after{
+    content: '';
+    border: 2px solid;
+    opacity: .8;
+
+    height: inherit;
+    width: inherit;
+    @apply block absolute inset-0 m-auto rounded-full;
+  }
+
+
+}

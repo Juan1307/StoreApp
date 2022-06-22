@@ -47,7 +47,10 @@
         }],
         "vue/html-closing-bracket-newline": "off",
         // props destructuring
-        "vue/no-setup-props-destructure": "warn"
-
+        "vue/no-setup-props-destructure": "warn",
+        // app initialization
+        "vue/multi-word-component-names":["error",{
+            "ignores": ["Main"]
+        }]
     }
 }

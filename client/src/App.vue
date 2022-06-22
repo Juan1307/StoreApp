@@ -1,21 +1,33 @@
 <script setup lang="ts">
-  // import { reactive, toRefs } from 'vue';
-  import HelloWorld from './components/HelloWorld.vue'
+  import { ref } from 'vue';
 
-  const currentUser = {
-    firstName: 'Juanito',
-    lastName: 'Prroee',
-    currentAge: 23
-  };
+  import AppNavBar from './components/AppNavBar.vue';
 
-  const handleChildEvent = (payload) => {
-    console.log(payload);
-  };
+  const state = ref(0);
 
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <button class="btn btn-primary btn-sm font-sati">Hello daisyui</button>
-  <HelloWorld :user="currentUser" @child-connect="handleChildEvent" />
+  <main :class="app.container">
+    <AppNavBar />
+
+    <h1>I am here</h1>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sit neque rem, laudantium, dolorem blanditiis cum commodi amet officiis ullam dicta veniam tempora placeat vero soluta asperiores similique deleniti ab.</div>
+    <div class="text-base-content text-2xl">Hola </div>
+    <div class="text-2xl">Hola </div>
+
+    <button class="btn btn-sm btn-outline btn-secondary" @click.prevent="state++">
+      increment {{ state }}
+    </button>
+
+    <button class="btn btn-sm btn-outline">
+      outlined
+    </button>
+  </main>
 </template>
+
+<style module="app" lang="postcss">
+  .container{
+    @apply px-[4%] py-[1.5%];
+  }
+</style>

@@ -10,6 +10,7 @@
     "lint.fix": "eslint --fix src/**/*.{ts,vue}"
   },
   "dependencies": {
+    "@vueuse/core": "^8.6.0",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
