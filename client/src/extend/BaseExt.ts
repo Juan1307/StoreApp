@@ -5,17 +5,17 @@ type StrType = string | number | boolean | object;
 
 const setLocalItem = (key: string) => (str: StrType) => localStorage.setItem(key, JSON.stringify(str));
 const delLocalItem = (key: string) => localStorage.removeItem(key);
-const getLocalItem = (key: string) => localStorage.getItem(key);
+const getLocalItem = (key: string) => {
+  const currentValue = localStorage.getItem(key);
+  return (!currentValue) ? currentValue : JSON.parse(currentValue);
+};
 
 export const storageMethods = { setLocalItem, delLocalItem, getLocalItem };
-
 
 // LOCAL THEME BASE
 export function setLocalTheme(themeMode?: string): void {
 
-  const setDocumentClass = (cls: string) => doc.body.classList.add(cls);
-  const delDocumentClass = () => doc.body.className = '';
-
+  const setDocumentClass = (cls: string) => doc.body.setAttribute('data-theme', cls);
   const currentTheme = themeMode ?? getLocalItem('theme'); 
 
   if(!currentTheme){
@@ -24,9 +24,7 @@ export function setLocalTheme(themeMode?: string): void {
 
     return;
   }
-  // clean clases body tag
-  delDocumentClass();
-  setDocumentClass(currentTheme);
 
+  setDocumentClass(currentTheme);
   themeMode && setLocalItem('theme')(currentTheme); //set new theme 
 }

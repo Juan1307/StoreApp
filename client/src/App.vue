@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
-  import AppNavBar from './components/AppNavBar.vue';
+  import TheNavBar from './components/TheNavBar.vue';
 
   const state = ref(0);
 
@@ -9,7 +9,7 @@
 
 <template>
   <main :class="app.container">
-    <AppNavBar />
+    <TheNavBar />
 
     <h1>I am here</h1>
     <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sit neque rem, laudantium, dolorem blanditiis cum commodi amet officiis ullam dicta veniam tempora placeat vero soluta asperiores similique deleniti ab.</div>

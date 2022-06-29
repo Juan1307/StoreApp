@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* list use colors */
+/* 
+  primary
+  primary-focus
+  primary-content
+
+  secondary
+  secondary-focus
+  secondary-content
+
+  base-content
+  neutral
+ */
+
+
 @layer base {
 
   @font-face {
@@ -23,7 +38,7 @@
 @layer components {
   /* custom by DaysiUi */
   .btn{
-    @apply rounded-sm capitalize font-normal;
+    @apply rounded-md capitalize font-normal;
   }
 
   .flex-center{
@@ -58,8 +73,8 @@
 
   .loader-circle > span::before{
     content: '';
-    border: 2px solid transparent;
-    border-top: 2px solid; /* passed by reference */
+    border: 3px solid transparent;
+    border-top: 3px solid; /* passed by reference */
     height: inherit;
     width: inherit;
 
@@ -69,7 +84,7 @@
 
   .loader-circle > span::after{
     content: '';
-    border: 2px solid;
+    border: 3px solid;
     opacity: .8;
 
     height: inherit;
@@ -77,5 +92,15 @@
     @apply block absolute inset-0 m-auto rounded-full;
   }
 
+}
+
+@layer variants {
+  .trans-opacity {
+    transition-property: opacity;
+  }
+
+  .trans-transform {
+    transition-property: transform;
+  }
 
 }

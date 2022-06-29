@@ -13,7 +13,6 @@
           isWorking = 'null is check' } = user;
   
   const emits = defineEmits<{ (e:'childConnect', payload: object) : void }>();
-
   // flow data
   const count = ref(0);
   const incrementCount = () => count.value++;

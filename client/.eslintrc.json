@@ -23,6 +23,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "@typescript-eslint/ban-ts-comment": "off",
         // al variables alteradas pero sin uso
         "@typescript-eslint/no-unused-vars": "error",
         // al usar require 

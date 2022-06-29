@@ -30,19 +30,22 @@ module.exports = {
   
   // custom theme daisy
   daisyui: {
-    themes: [{
-      light: {
-        primary: '#16a34a',
-        secondary: '#059669',
-        accent: '#65a30d',
-        neutral: '#f3f4f6',
-        'base-100': '#ffffff',
-        info: '#38bdf8',
-        success: '#4ade80',
-        warning: '#fcd34d',
-        error: '#fca5a5',
+    themes: [
+      {
+        light: {
+          primary: '#16a34a',
+          secondary: '#059669',
+          accent: '#65a30d',
+          neutral: '#f3f4f6',
+          'base-100': '#ffffff',
+          info: '#38bdf8',
+          success: '#4ade80',
+          warning: '#fcd34d',
+          error: '#fca5a5',
+        }
       }
-    }],
-    darkTheme: 'light'
+      // }, "dark"
+    ]
+    // darkTheme: 'light'
   }
 }

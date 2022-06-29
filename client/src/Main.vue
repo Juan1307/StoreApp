@@ -1,15 +1,15 @@
 <script setup lang="ts">
 
   import { defineAsyncComponent } from 'vue';
-  import LoaderApp from './components/LoaderApp.vue';
+  import TheLoader from './components/TheLoader.vue';
 
   const AsyncApp = defineAsyncComponent({
     loader: () => { 
       return new Promise((resolve) => {
-        setTimeout(() => resolve( import('./App.vue') ), 10000);  
+        setTimeout(() => resolve( import('./App.vue') ), 2000);  
       });
     }, // get async component
-    loadingComponent: LoaderApp
+    loadingComponent: TheLoader
   });
 
 </script>

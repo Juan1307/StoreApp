@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-  import { setLocalTheme } from './../extend/BaseExt.ts'; 
+  import { setLocalTheme } from '@extend/BaseExt'; 
   setLocalTheme(); // no params check theme
 
 </script>
